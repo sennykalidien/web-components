@@ -5,6 +5,7 @@ import { Button } from './Button';
 
 export const variant = () => select('Variant', ['primary', 'ghost'], 'primary');
 export const disabled = () => boolean('Disabled', false);
+export const loading = () => boolean('Loading', false);
 export const href = () => text('Link', '');
 export const label = () => text('Text', 'Default');
 export const target = () => select('Target', ['_self', '_blank'], '_blank');
@@ -22,6 +23,7 @@ This is a button component
     <custom-button
         variant="${variant()}"
         ?disabled="${disabled()}"
+        ?loading="${loading()}"
         href="${href()}"
         .target="${target()}">
         ${label()}
