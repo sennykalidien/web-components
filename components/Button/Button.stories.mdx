@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/addon-docs';
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
 import { select, boolean, text } from '@storybook/addon-knobs';
 import { html } from 'lit'
 import { Button } from './Button';
@@ -17,59 +17,67 @@ export const target = () => select('Target', ['_self', '_blank'], '_blank');
 This is a button component
 
 ## Main
-<Story name="Button/Knobs">
-  {html`
-    <yw-button
-        variant="${variant()}"
-        ?disabled="${disabled()}"
-        href="${href()}"
-        .target="${target()}">
-        ${label()}
-    </yw-button>
-  `}
-</Story>
+<Canvas>
+    <Story name="Button/Knobs">
+      {html`
+        <yw-button
+            variant="${variant()}"
+            ?disabled="${disabled()}"
+            href="${href()}"
+            .target="${target()}">
+            ${label()}
+        </yw-button>
+      `}
+    </Story>
+</Canvas>
 
 ## Primary
-<Story name="Button/Primary">
-  {html`
-    <yw-button
-        variant="primary">
-        Primary
-    </yw-button>
-    <yw-button
-        variant="primary"
-        disabled>
-        Primary
-    </yw-button>
-  `}
-</Story>
+<Canvas>
+    <Story name="Button/Primary">
+      {html`
+        <yw-button
+            variant="primary">
+            Primary
+        </yw-button>
+        <yw-button
+            variant="primary"
+            disabled>
+            Primary
+        </yw-button>
+      `}
+    </Story>
+</Canvas>
 
 ## Ghost
-<Story name="Button/Secondary">
-  {html`
-    <yw-button
-        variant="ghost">
-        Primary
-    </yw-button>
-    <yw-button
-        variant="ghost" disabled>
-        Primary
-    </yw-button>
-  `}
-</Story>
+<Canvas>
+    <Story name="Button/Secondary">
+      {html`
+        <yw-button
+            variant="ghost">
+            Primary
+        </yw-button>
+        <yw-button
+            variant="ghost" disabled>
+            Primary
+        </yw-button>
+      `}
+    </Story>
+</Canvas>
 
 ## Disabled
-<Story name="Button/Disabled">
-  {html`
-    <yw-button
-        variant="primary"
-        disabled>
-        Primary
-    </yw-button>
-    <yw-button
-        variant="ghost"
-        disabled>
-        Primary
-    </yw-button>
-  `}
-</Story>
+<Canvas>
+    <Story name="Button/Disabled">
+      {html`
+        <yw-button
+            variant="primary"
+            disabled>
+            Primary
+        </yw-button>
+        <yw-button
+            variant="ghost"
+            disabled>
+            Primary
+        </yw-button>
+      `}
+    </Story>
+</Canvas>
