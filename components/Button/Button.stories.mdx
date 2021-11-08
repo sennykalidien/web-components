@@ -19,63 +19,63 @@ This is a button component
 ## Main
 <Story name="Button/Knobs">
   {html`
-    <yw-button
+    <custom-button
         variant="${variant()}"
         ?disabled="${disabled()}"
         href="${href()}"
         .target="${target()}">
         ${label()}
-    </yw-button>
+    </custom-button>
   `}
 </Story>
 
 ## Primary
 <Canvas>
-    <Story name="Button/Primary">
+    <Story name="Button/Primary" parameters={{ docs: { source: { code: `<custom-button variant="primary">Primary</custom-button>`}}}}>
       {html`
-        <yw-button
+        <custom-button
             variant="primary">
             Primary
-        </yw-button>
-        <yw-button
+        </custom-button>
+        <custom-button
             variant="primary"
             disabled>
             Primary
-        </yw-button>
+        </custom-button>
       `}
     </Story>
 </Canvas>
 
 ## Ghost
 <Canvas>
-    <Story name="Button/Secondary">
+    <Story name="Button/Secondary" parameters={{ docs: { source: { code: `<custom-button variant="ghost">Ghost</custom-button>`}}}}>
       {html`
-        <yw-button
+        <custom-button
             variant="ghost">
             Primary
-        </yw-button>
-        <yw-button
+        </custom-button>
+        <custom-button
             variant="ghost" disabled>
             Primary
-        </yw-button>
+        </custom-button>
       `}
     </Story>
 </Canvas>
 
 ## Disabled
 <Canvas>
-    <Story name="Button/Disabled">
+    <Story name="Button/Disabled" parameters={{ docs: { source: { code: `<custom-button disabled>Disabled</custom-button>`}}}}>
       {html`
-        <yw-button
+        <custom-button
             variant="primary"
             disabled>
             Primary
-        </yw-button>
-        <yw-button
+        </custom-button>
+        <custom-button
             variant="ghost"
             disabled>
             Primary
-        </yw-button>
+        </custom-button>
       `}
     </Story>
 </Canvas>

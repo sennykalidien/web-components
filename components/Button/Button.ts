@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js';
 type ButtonVariant = 'primary' | 'ghost';
 type ButtonTarget = '_blank' | 'self' | string;
 
-@customElement('yw-button')
+@customElement('custom-button')
 export class Button extends LitElement {
     // Declare reactive properties
     @property({ type: String, reflect: false }) href?: string;
