@@ -25,7 +25,6 @@ export class Button extends LitElement {
           --yw-button-color: var(--button-color);
           --yw-button-padding: var(--button-padding, 0.625rem 1.25rem);
           --yw-button-cursor: var(--button-cursor, pointer);
-          --yw-button-pointer-events: var(--button-pointer-events, all);
         }
       
         :host([variant='primary']) {
@@ -53,7 +52,6 @@ export class Button extends LitElement {
             --yw-button-border-color-hover: var(--button-background-color, var(--color-primary-disabled));
             --yw-button-color: var(--button-background-color, var(--color-grey-dark));
             --yw-button-cursor: not-allowed;
-            --yw-button-pointer-events: var(--button-pointer-events, none);
         }      
 
         :host([variant='primary'][disabled]) {
@@ -93,7 +91,6 @@ export class Button extends LitElement {
           font-weight: 700;
           line-height: 24px;
           padding: var(--yw-button-padding);
-          pointer-events: var(--yw-button-pointer-events);
           text-decoration: none;
           transition: background-color .25s, border-color .25s, color .25s;
         }
@@ -169,8 +166,15 @@ export class Button extends LitElement {
         }
   `;
 
-    private bindEvents() {
+    private bindEvents(event: Event) {
+        if(this.disabled) {
+            event.preventDefault()
+            return false;
+        }
+
         this.loading = !this.loading;
+
+        return true;
     }
 
     // Render the UI as a function of component state
