@@ -17,19 +17,17 @@ export const target = () => select('Target', ['_self', '_blank'], '_blank');
 This is a button component
 
 ## Main
-<Canvas>
-    <Story name="Button/Knobs">
-      {html`
-        <yw-button
-            variant="${variant()}"
-            ?disabled="${disabled()}"
-            href="${href()}"
-            .target="${target()}">
-            ${label()}
-        </yw-button>
-      `}
-    </Story>
-</Canvas>
+<Story name="Button/Knobs">
+  {html`
+    <yw-button
+        variant="${variant()}"
+        ?disabled="${disabled()}"
+        href="${href()}"
+        .target="${target()}">
+        ${label()}
+    </yw-button>
+  `}
+</Story>
 
 ## Primary
 <Canvas>
