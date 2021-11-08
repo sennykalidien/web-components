@@ -3,8 +3,8 @@ module.exports = {
     "../**/*.stories.mdx",
   ],
   "addons": [
+    "@storybook/addon-knobs",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-knobs"
   ],
 }
