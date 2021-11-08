@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@storybook/addon-knobs": "^6.3.1",
+    "lit": "^2.0.2"
+  },
+  "scripts": {
+    "start": "npm run storybook",
+    "lint": "eslint \"**/*.{js,ts}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o dist",
+    "build": "tsc --outDir ./dist/ --module es2015"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-decorators": "^7.16.0",
+    "@babel/plugin-proposal-private-methods": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/web-components": "^6.3.12",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.2.0",
+    "typescript": "^4.4.4"
+  }
+}

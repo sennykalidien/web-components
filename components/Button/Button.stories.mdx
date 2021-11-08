@@ -1,0 +1,75 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import { select, boolean, text } from '@storybook/addon-knobs';
+import { html } from 'lit'
+import { Button } from './Button';
+
+export const variant = () => select('Variant', ['primary', 'ghost'], 'primary');
+export const disabled = () => boolean('Disabled', false);
+export const href = () => text('Link', '');
+export const label = () => text('Text', 'Default');
+export const target = () => select('Target', ['_self', '_blank'], '_blank');
+
+<Meta
+    title="Components/Button"
+/>
+
+# Button
+This is a button component
+
+## Main
+<Story name="Button/Knobs">
+  {html`
+    <yw-button
+        variant="${variant()}"
+        ?disabled="${disabled()}"
+        href="${href()}"
+        .target="${target()}">
+        ${label()}
+    </yw-button>
+  `}
+</Story>
+
+## Primary
+<Story name="Button/Primary">
+  {html`
+    <yw-button
+        variant="primary">
+        Primary
+    </yw-button>
+    <yw-button
+        variant="primary"
+        disabled>
+        Primary
+    </yw-button>
+  `}
+</Story>
+
+## Ghost
+<Story name="Button/Secondary">
+  {html`
+    <yw-button
+        variant="ghost">
+        Primary
+    </yw-button>
+    <yw-button
+        variant="ghost" disabled>
+        Primary
+    </yw-button>
+  `}
+</Story>
+
+## Disabled
+<Story name="Button/Disabled">
+  {html`
+    <yw-button
+        variant="primary"
+        disabled>
+        Primary
+    </yw-button>
+    <yw-button
+        variant="ghost"
+        disabled>
+        Primary
+    </yw-button>
+  `}
+</Story>
