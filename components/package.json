@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@storybook/addon-knobs": "^6.3.1",
     "lit": "^2.0.2"
   },
   "scripts": {
@@ -18,10 +17,15 @@
     "@babel/preset-typescript": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-knobs": "^6.3.1",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/web-components": "^6.3.12",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.0.6",
     "eslint": "^8.2.0",
+    "lit-css-loader": "^1.2.1",
+    "storybook-addon-designs": "^6.2.0",
+    "storybook-contrast": "^0.11.6",
     "typescript": "^4.4.4"
   }
 }
