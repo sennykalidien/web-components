@@ -10,6 +10,8 @@ export const href = () => text('Link', '');
 export const label = () => text('Text', 'Default');
 export const target = () => select('Target', ['_self', '_blank'], '_blank');
 
+import { withDesign } from 'storybook-addon-designs'
+
 <Meta
     title="Components/Button"
 />
@@ -18,7 +20,15 @@ export const target = () => select('Target', ['_self', '_blank'], '_blank');
 This is a button component
 
 ## Main
-<Story name="Button/Knobs">
+<Story
+    name="Button/Knobs"
+    decorators={[withDesign]}
+    parameters={{
+     design: {
+       type: 'figma',
+       url: 'https://www.figma.com/file/7erkg5bpXTYc7EW97CHaK6/Kooyman-B.V.'
+     }
+    }}>
   {html`
     <custom-button
         variant="${variant()}"
