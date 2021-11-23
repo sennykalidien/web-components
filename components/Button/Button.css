@@ -61,7 +61,7 @@
     color: var(--yw-button-color);
     display: inline-block;
     font-family: 'Helvetica Neue';
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 24px;
     padding: var(--yw-button-padding);
