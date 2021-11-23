@@ -5,7 +5,6 @@ module.exports = {
   "addons": [
     "@storybook/addon-knobs",
     "@storybook/addon-links",
-    "@storybook/addon-essentiagit adls",
-    'storybook-addon-designs'
+    "@storybook/addon-essentials"
   ]
 }
